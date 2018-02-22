@@ -62,7 +62,7 @@ public class BankAccount {
 	}
 	
 	public void setAccType(String accType){
-		accType = accType;
+		this.accountType = accType;
 	}
 	
 	public String getAccType(){
