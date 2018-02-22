@@ -786,17 +786,6 @@ public static void saveToFile(){
 	    closeFile();		
 	}
 	
-	public void put(int key, BankAccount value){
-		int hash = (key%TABLE_SIZE);
-	
-		while(table.containsKey(key)){
-			hash = hash+1;
-		
-		}
-		table.put(hash, value);
-
-	}
-	
 	public static void main(String[] args) {
 		BankApplication ba = new BankApplication();
 		ba.setSize(1200,400);
