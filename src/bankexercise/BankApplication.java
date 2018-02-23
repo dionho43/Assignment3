@@ -706,8 +706,8 @@ public class BankApplication extends JFrame {
 
 	       
 	            
-	            BankAccount ba = new BankAccount(record.getAccountID(), record.getAccountNumber(), record.getFirstName(),
-	                    record.getSurname(), record.getAccountType(), record.getBalance(), record.getOverdraft());
+	            BankAccount ba = new BankAccount(record.getAccountID(), record.getAccountNumber(), record.getSurname(),
+	                    record.getFirstName(), record.getAccountType(), record.getBalance(), record.getOverdraft());
 	            
 	            
 	            Integer key = Integer.valueOf(ba.getAccountNumber().trim());
