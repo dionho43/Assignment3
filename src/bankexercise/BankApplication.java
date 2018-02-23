@@ -268,7 +268,7 @@ public class BankApplication extends JFrame {
 
 		ActionListener prev = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				if (!table.isEmpty()) {
 				ArrayList<Integer> keyList = new ArrayList<Integer>();
 				int i=0;
 		
@@ -289,6 +289,7 @@ public class BankApplication extends JFrame {
 					}
 				}
 				displayDetails(currentItem);				
+			}
 			}
 		};
 	
