@@ -639,15 +639,10 @@ public class BankApplication extends JFrame {
 	            		record.read( input );
 	            } while ( record.getAccountID() == 0 );
 
-	       
-	            
 	            BankAccount ba = new BankAccount(record.getAccountID(), record.getAccountNumber(), record.getSurname(),
 	                    record.getFirstName(), record.getAccountType(), record.getBalance(), record.getOverdraft());
-	            
-	            
-	            Integer key = Integer.valueOf(ba.getAccountNumber().trim());
 			
-				int hash = (key%TABLE_SIZE);
+				int hash = 0;
 		
 				
 				while(table.containsKey(hash)){
