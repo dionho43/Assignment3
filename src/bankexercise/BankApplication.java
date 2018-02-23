@@ -279,12 +279,9 @@ public class BankApplication extends JFrame {
 				}
 				
 				int minKey = Collections.min(keyList);
-				//System.out.println(minKey);
-				
 				if(currentItem>minKey){
 					currentItem--;
 					while(!table.containsKey(currentItem)){
-						//System.out.println("Current: " + currentItem + ", min key: " + minKey);
 						currentItem--;
 					}
 				}
