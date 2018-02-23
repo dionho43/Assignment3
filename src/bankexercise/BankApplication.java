@@ -294,7 +294,7 @@ public class BankApplication extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				saveOpenValues();
 				if (!table.isEmpty()) {
-				currentItem =29;
+				currentItem =table.size();
 								
 				while(!table.containsKey(currentItem)){
 					currentItem--;
