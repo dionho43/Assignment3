@@ -239,8 +239,8 @@ public class BankApplication extends JFrame {
 	
 		ActionListener last = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				saveOpenValues();
 				if (!table.isEmpty()) {
+					saveOpenValues();
 				currentItem =table.size();
 								
 				while(!table.containsKey(currentItem)){
