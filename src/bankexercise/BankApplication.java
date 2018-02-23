@@ -268,6 +268,7 @@ public class BankApplication extends JFrame {
 		
 		deleteItem.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				if (!table.isEmpty()) {
 						
 							table.remove(currentItem);
 							JOptionPane.showMessageDialog(null, "Account Deleted");
@@ -280,6 +281,7 @@ public class BankApplication extends JFrame {
 							displayDetails(currentItem);
 							
 			}
+			}
 		});
 		
 		createItem.addActionListener(new ActionListener(){
@@ -291,10 +293,12 @@ public class BankApplication extends JFrame {
 		
 		modifyItem.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				if (!table.isEmpty()) {
 				surnameTextField.setEditable(true);
 				firstNameTextField.setEditable(true);
 				
 				openValues = true;
+			}
 			}
 		});
 		
