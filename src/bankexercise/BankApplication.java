@@ -201,9 +201,8 @@ public class BankApplication extends JFrame {
 	
 		ActionListener first = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				saveOpenValues();
 				if (!table.isEmpty()) {
+					saveOpenValues();
 				currentItem=0;
 				while(!table.containsKey(currentItem)){
 					currentItem++;
@@ -216,8 +215,7 @@ public class BankApplication extends JFrame {
 		ActionListener next1 = new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				if (!table.isEmpty()) {
-				saveOpenValues();	
-		
+					saveOpenValues();
 					if(currentItem<table.size()-1){
 						currentItem++;
 					}
@@ -229,6 +227,7 @@ public class BankApplication extends JFrame {
 		ActionListener prev = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!table.isEmpty()) {
+					saveOpenValues();
 					
 				if(currentItem>0){
 					currentItem--;
@@ -294,6 +293,7 @@ public class BankApplication extends JFrame {
 		modifyItem.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				if (!table.isEmpty()) {
+					saveOpenValues();
 				surnameTextField.setEditable(true);
 				firstNameTextField.setEditable(true);
 				
