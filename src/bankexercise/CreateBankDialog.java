@@ -169,11 +169,8 @@ public class CreateBankDialog extends JFrame {
 						
 						
 							BankAccount account = new BankAccount(randNumber, accountNumber, surname, firstName, accountType, 0.0, 0.0);
-						
 							
-							int key = Integer.parseInt(account.getAccountNumber());
-							
-							int hash = (key%TABLE_SIZE);
+							int hash = 0;
 							
 							while(table.containsKey(hash)){
 								hash = hash+1;

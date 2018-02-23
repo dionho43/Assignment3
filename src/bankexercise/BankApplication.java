@@ -293,7 +293,7 @@ public class BankApplication extends JFrame {
 		ActionListener last = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				saveOpenValues();
-				
+				if (!table.isEmpty()) {
 				currentItem =29;
 								
 				while(!table.containsKey(currentItem)){
@@ -302,6 +302,7 @@ public class BankApplication extends JFrame {
 				}
 				
 				displayDetails(currentItem);
+			}
 			}
 		};
 		
