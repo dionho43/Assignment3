@@ -240,26 +240,12 @@ public class BankApplication extends JFrame {
 		ActionListener next1 = new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				if (!table.isEmpty()) {
-				ArrayList<Integer> keyList = new ArrayList<Integer>();
-				int i=0;
-		
-				while(i<TABLE_SIZE){
-					i++;
-					if(table.containsKey(i))
-						keyList.add(i);
-				}
-				
-				int maxKey = Collections.max(keyList);
-		
 				saveOpenValues();	
 		
-					if(currentItem<maxKey){
+					if(currentItem<table.size()){
 						currentItem++;
-						while(!table.containsKey(currentItem)){
-							currentItem++;
-						}
 					}
-					displayDetails(currentItem);			
+					displayDetails(currentItem-1);			
 			}
 			}
 		};
