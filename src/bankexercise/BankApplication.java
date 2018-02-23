@@ -249,8 +249,6 @@ public class BankApplication extends JFrame {
 			}
 			}
 		};
-		
-		
 
 		ActionListener prev = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -338,9 +336,6 @@ public class BankApplication extends JFrame {
 			public void actionPerformed(ActionEvent e){
 		
 				JFrame frame = new JFrame("TableDemo");
-				JPanel pan = new JPanel();
-			
-		        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				String col[] = {"ID","Number","Name", "Account Type", "Balance", "Overdraft"};
 				
 				DefaultTableModel tableModel = new DefaultTableModel(col, 0);
@@ -360,7 +355,6 @@ public class BankApplication extends JFrame {
 				}
 				frame.setSize(600,500);
 				frame.add(scrollPane);
-				//frame.pack();
 		        frame.setVisible(true);			
 			}
 		});
