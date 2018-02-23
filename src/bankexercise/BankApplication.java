@@ -623,17 +623,22 @@ public class BankApplication extends JFrame {
 	
 	      RandomAccessBankAccount record = new RandomAccessBankAccount();
 
-	      
-
 	      try // read a record and display
 	      {
 	         while ( true )
 	         {
 	            do
 	            {
-	            	if(input!=null)
+	            	if(input!=null && input.length() != 0)
+	            	{
 	            		record.read( input );
-	            } while ( record.getAccountID() == 0 );
+	            	}
+	            	else
+	            	{
+	            		JOptionPane.showMessageDialog(null, "Error reading file.");
+	       	         	System.exit( 1 );
+	            	}
+	            } while ( record.getAccountID() == 0);
 
 	            BankAccount ba = new BankAccount(record.getAccountID(), record.getAccountNumber(), record.getSurname(),
 	                    record.getFirstName(), record.getAccountType(), record.getBalance(), record.getOverdraft());
