@@ -227,27 +227,13 @@ public class BankApplication extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				saveOpenValues();
-				
+				if (!table.isEmpty()) {
 				currentItem=0;
 				while(!table.containsKey(currentItem)){
 					currentItem++;
 				}
 				displayDetails(currentItem);
 			}
-		};
-		
-		ActionListener next = new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				saveOpenValues();
-				// No next if at end of list.
-				if (currentItem != (table.size()-1)) {
-					// Move to next item.
-						currentItem++;
-					while(!table.containsKey(currentItem) ){
-						currentItem++;
-					}
-					displayDetails(currentItem);			
-				}				
 			}
 		};
 		
