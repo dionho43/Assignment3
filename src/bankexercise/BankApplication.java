@@ -242,10 +242,10 @@ public class BankApplication extends JFrame {
 				if (!table.isEmpty()) {
 				saveOpenValues();	
 		
-					if(currentItem<table.size()){
+					if(currentItem<table.size()-1){
 						currentItem++;
 					}
-					displayDetails(currentItem-1);			
+					displayDetails(currentItem);			
 			}
 			}
 		};
@@ -255,21 +255,9 @@ public class BankApplication extends JFrame {
 		ActionListener prev = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!table.isEmpty()) {
-				ArrayList<Integer> keyList = new ArrayList<Integer>();
-				int i=0;
-		
-				while(i<TABLE_SIZE){
-					i++;
-					if(table.containsKey(i))
-						keyList.add(i);
-				}
-				
-				int minKey = Collections.min(keyList);
-				if(currentItem>minKey){
+					
+				if(currentItem>0){
 					currentItem--;
-					while(!table.containsKey(currentItem)){
-						currentItem--;
-					}
 				}
 				displayDetails(currentItem);				
 			}
