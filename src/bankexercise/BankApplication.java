@@ -15,8 +15,6 @@ public class BankApplication extends JFrame {
 	
 	ArrayList<BankAccount> accountList = new ArrayList<BankAccount>();
 	static HashMap<Integer, BankAccount> table = new HashMap<Integer, BankAccount>();
-	private final static int TABLE_SIZE = 29;
-	static private final String newline = "\n";
 	
 	JMenuBar menuBar;
 	JMenu navigateMenu, recordsMenu, transactionsMenu, fileMenu, exitMenu;
@@ -41,7 +39,6 @@ public class BankApplication extends JFrame {
 		
 		super("Bank Application");
 		
-		int currentItem;
 		initComponents();
 	}
 	
@@ -528,7 +525,6 @@ public class BankApplication extends JFrame {
 	
 	private static RandomAccessFile input;
 	private static RandomAccessFile output;
-	private static final int NUMBER_RECORDS = 100;
 
 	
 	public static void openFileRead()
@@ -540,7 +536,7 @@ public class BankApplication extends JFrame {
 		int returnVal = fc.showOpenDialog(null);
 		 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = fc.getSelectedFile();
+            fc.getSelectedFile();
 
         } else {
                 }
@@ -670,8 +666,6 @@ public static void saveToFile(){
 		
 	
 		RandomAccessBankAccount record = new RandomAccessBankAccount();
-	
-	      Scanner input = new Scanner( System.in );
 
 	      
 	      for (Map.Entry<Integer, BankAccount> entry : table.entrySet()) {
